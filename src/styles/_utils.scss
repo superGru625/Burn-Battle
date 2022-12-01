@@ -1,0 +1,29 @@
+@use "sass:color";
+@use "sass:math";
+
+@mixin gradientBackground($color-start, $color-end, $gradientBorderWidth) {
+  box-sizing: border-box;
+  border: $gradientBorderWidth solid transparent;
+  background: linear-gradient(to bottom, $color-start, $color-end) padding-box,
+    linear-gradient(to bottom, $color-end, $color-start) border-box;
+}
+
+@mixin goldenGradientBackground($gradientBorderWidth, $flipped: false) {
+  @if $flipped {
+    @include gradientBackground(#7e3500, #eaa800, $gradientBorderWidth);
+  } @else {
+    @include gradientBackground(#eaa800, #7e3500, $gradientBorderWidth);
+  }
+}
+
+@mixin greyGradientBackground($gradientBorderWidth, $flipped: false) {
+  @if $flipped {
+    @include gradientBackground(#454651, #707284, $gradientBorderWidth);
+  } @else {
+    @include gradientBackground(#707284, #454651, $gradientBorderWidth);
+  }
+}
+
+@mixin shadowOutline($width, $color: black) {
+  box-shadow: 0 0 0 $width $color;
+}

@@ -1,0 +1,14 @@
+@use "sass:math";
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999;
+
+  background: no-repeat center/ max(math.sqrt(2) * 100vh, math.sqrt(2) * 100vw)
+      url("/rays.svg"),
+    radial-gradient(50vh 50vh at 50% 50%, #da903f 67.19%, #bc7221 100%);
+}

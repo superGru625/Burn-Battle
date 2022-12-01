@@ -1,0 +1,76 @@
+@use "src/styles/utils";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  .icon {
+    margin-right: 1em;
+  }
+
+  &.right {
+    flex-direction: row-reverse;
+
+    .roundsContainer {
+      right: unset !important;
+      left: 0;
+    }
+
+    .icon {
+      margin-right: 0 !important;
+      margin-left: 1em;
+    }
+  }
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: Mont;
+
+  text-transform: uppercase;
+
+  &.reversed {
+    flex-direction: row-reverse;
+  }
+
+  .name {
+    font-weight: 900;
+    color: black;
+    font-size: 1.25em;
+  }
+
+  .walletAddress {
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+
+.roundsContainer {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.25em);
+  gap: 0.5em;
+
+  display: grid;
+  grid-auto-flow: column;
+
+  .round {
+    @include utils.greyGradientBackground(0.125em);
+    width: 1em;
+    height: 1em;
+    border-radius: 0.25em;
+
+    &.won {
+      @include utils.goldenGradientBackground(0.125em);
+    }
+  }
+}

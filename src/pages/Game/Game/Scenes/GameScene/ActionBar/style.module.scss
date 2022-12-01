@@ -1,0 +1,64 @@
+@use "src/styles/utils";
+
+.container {
+  @include utils.goldenGradientBackground(0.25em);
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1em - 0.25em - 0.125em;
+  border-radius: 1.25em;
+  width: fit-content;
+
+  opacity: 0.8;
+  pointer-events: none;
+  &.enabled {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.title {
+  font-family: Mont;
+  font-weight: 900;
+  color: white;
+  text-align: right;
+  font-size: 1em;
+}
+
+.button {
+  @include utils.shadowOutline(0.125em);
+  @include utils.greyGradientBackground(0.125em);
+  width: 2.25em;
+  height: 2.25em;
+  border-radius: 0.75em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  &.selected {
+    @include utils.gradientBackground(#62804b, #0b450a, 0.125em);
+  }
+
+  &.hidden {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  & > span {
+    font-size: 1em;
+    font-family: Mont;
+    color: white;
+    font-weight: 900;
+  }
+}
+
+.verticalDivider {
+  width: 0.125em;
+  height: 2.25em;
+  background: white;
+  opacity: 0.4;
+}

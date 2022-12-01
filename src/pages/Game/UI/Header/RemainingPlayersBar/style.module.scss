@@ -1,0 +1,30 @@
+.labelContainer {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0 1em;
+
+  .labelIcon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .label {
+    font-family: Mont;
+    font-weight: 900;
+    font-size: 0.75em;
+    line-height: 90%;
+    color: white;
+    white-space: pre-line;
+    align-self: flex-end;
+  }
+}
+
+.amount {
+  font-family: Mont;
+  font-weight: 900;
+  font-size: 1.5em;
+  color: white;
+  margin: 0 0.75em;
+}

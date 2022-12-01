@@ -1,0 +1,21 @@
+@use "src/styles/utils";
+
+$size: 3.5em;
+$border-radius: 0.5em;
+$border-width: 0.25em;
+
+.background {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: $border-radius + $border-width;
+  width: $size;
+  height: $size;
+}
+
+.golden {
+  @include utils.goldenGradientBackground($border-width);
+}
+
+.grey {
+  @include utils.greyGradientBackground($border-width);
+}

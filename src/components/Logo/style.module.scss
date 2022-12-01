@@ -1,0 +1,25 @@
+.logo {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+
+  &.left {
+    transform: none;
+    left: 3em !important;
+    right: unset !important;
+  }
+  &,
+  &.center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.right {
+    transform: none;
+    right: 3em !important;
+    left: unset !important;
+  }
+
+  user-select: none;
+  width: min(13em, 50vw);
+  filter: drop-shadow(0 0 0.6em rgba(0, 0, 0, 0.2));
+}

@@ -1,0 +1,42 @@
+@use "src/styles/utils";
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+  user-select: none;
+  cursor: pointer;
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &.selected {
+    .iconContainer {
+      @include utils.gradientBackground(#62804b, #0b450a, 0.125em);
+    }
+  }
+}
+
+.iconContainer {
+  @include utils.shadowOutline(0.125em);
+  @include utils.greyGradientBackground(0.125em);
+  width: 2.25em;
+  height: 2.25em;
+  border-radius: 0.75em;
+
+  margin: 0 0.75em;
+
+  & > div {
+    background-size: 1em !important;
+  }
+}
+
+.text {
+  font-family: Mont;
+  font-weight: 900;
+  color: white;
+  white-space: break-spaces;
+  text-align: left;
+}

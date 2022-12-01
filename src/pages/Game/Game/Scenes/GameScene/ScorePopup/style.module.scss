@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Mont;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+
+  &.red {
+    color: #ed1f25;
+  }
+  &.green {
+    color: #50753d;
+  }
+}
+
+.score {
+  font-size: 4em;
+  line-height: 0.8em;
+}
+.label {
+  font-size: 1.5em;
+}
